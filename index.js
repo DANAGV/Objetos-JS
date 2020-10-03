@@ -51,9 +51,18 @@ const cars = [
 ]
 
 
-let verificationInputData = () => {
-  let yearCar = prompt("Dame el año del carro prro")
+const verificationInputData = () => {
+  let yearCar = parseInt (prompt("Dame el año del carro We"))
   isNaN(yearCar) ? yearCar = verificationInputData() : null
 
   return yearCar
 }
+
+
+
+const searchCar = (cars) => {
+  let yearCar = verificationInputData()
+  cars.forEach (({ year, maker, model, hp}, index) => parseInt(year)> yearCar? console.log(`Opción ${index+1}: ${maker} ${model} del año ${year}, con ${hp} caballos de fuerza`) : null)
+} 
+
+searchCar(cars)
