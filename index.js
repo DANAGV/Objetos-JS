@@ -49,3 +49,11 @@ const cars = [
     hp: '200'
   }
 ]
+
+
+let verificationInputData = () => {
+  let yearCar = prompt("Dame el año del carro prro")
+  isNaN(yearCar) ? yearCar = verificationInputData() : null
+
+  return yearCar
+}
